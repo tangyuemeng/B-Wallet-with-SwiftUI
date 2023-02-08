@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>935273351626-7grans0toov4mo5otr726emsmvak4m9c.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.935273351626-7grans0toov4mo5otr726emsmvak4m9c</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAgzqYb5sb5_ka7gpOBg9LHg0dWAIE-clE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>935273351626</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>YUEMENG-TANG.E-WALLET</string>
+	<key>PROJECT_ID</key>
+	<string>b-wallet-a1546</string>
+	<key>STORAGE_BUCKET</key>
+	<string>b-wallet-a1546.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:935273351626:ios:aa409006e3a13eca896733</string>
+</dict>
+</plist>

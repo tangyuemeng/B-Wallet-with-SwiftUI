@@ -14,6 +14,14 @@
 		760E5FF7298E028500E28982 /* E_WALLETTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E5FF6298E028500E28982 /* E_WALLETTests.swift */; };
 		760E6001298E028500E28982 /* E_WALLETUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E6000298E028500E28982 /* E_WALLETUITests.swift */; };
 		760E6003298E028500E28982 /* E_WALLETUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E6002298E028500E28982 /* E_WALLETUITestsLaunchTests.swift */; };
+		760E6010298E1AA000E28982 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E600F298E1AA000E28982 /* Home.swift */; };
+		760E6012298E2AA300E28982 /* UISetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E6011298E2AA300E28982 /* UISetting.swift */; };
+		760E6014298E325500E28982 /* UIStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E6013298E325500E28982 /* UIStart.swift */; };
+		760E6016298E327000E28982 /* UIWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E6015298E327000E28982 /* UIWallet.swift */; };
+		768C4BBA2990DCA400AF6C47 /* Datamanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768C4BB92990DCA400AF6C47 /* Datamanager.swift */; };
+		768C4BC02990EE9600AF6C47 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768C4BBF2990EE9600AF6C47 /* ApiManager.swift */; };
+		768C4BC82990EF2500AF6C47 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768C4BC72990EF2500AF6C47 /* DataModel.swift */; };
+		76FE1089298FBE3E00EAAB96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76FE1088298FBE3E00EAAB96 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +42,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		760E5FE1298E028400E28982 /* E WALLET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E WALLET.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		760E5FE1298E028400E28982 /* B WALLET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "B WALLET.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		760E5FE4298E028400E28982 /* E_WALLETApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_WALLETApp.swift; sourceTree = "<group>"; };
 		760E5FE6298E028400E28982 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		760E5FE8298E028500E28982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		760E5FEA298E028500E28982 /* E_WALLET.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = E_WALLET.entitlements; sourceTree = "<group>"; };
 		760E5FEC298E028500E28982 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		760E5FF2298E028500E28982 /* E WALLETTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E WALLETTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		760E5FF2298E028500E28982 /* B WALLETTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "B WALLETTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		760E5FF6298E028500E28982 /* E_WALLETTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_WALLETTests.swift; sourceTree = "<group>"; };
-		760E5FFC298E028500E28982 /* E WALLETUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E WALLETUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		760E5FFC298E028500E28982 /* B WALLETUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "B WALLETUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		760E6000298E028500E28982 /* E_WALLETUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_WALLETUITests.swift; sourceTree = "<group>"; };
 		760E6002298E028500E28982 /* E_WALLETUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_WALLETUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		760E600F298E1AA000E28982 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		760E6011298E2AA300E28982 /* UISetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetting.swift; sourceTree = "<group>"; };
+		760E6013298E325500E28982 /* UIStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStart.swift; sourceTree = "<group>"; };
+		760E6015298E327000E28982 /* UIWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWallet.swift; sourceTree = "<group>"; };
+		768C4BB92990DCA400AF6C47 /* Datamanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datamanager.swift; sourceTree = "<group>"; };
+		768C4BBF2990EE9600AF6C47 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		768C4BC72990EF2500AF6C47 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		76FE1088298FBE3E00EAAB96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +101,9 @@
 		760E5FE2298E028400E28982 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				760E5FE1298E028400E28982 /* E WALLET.app */,
-				760E5FF2298E028500E28982 /* E WALLETTests.xctest */,
-				760E5FFC298E028500E28982 /* E WALLETUITests.xctest */,
+				760E5FE1298E028400E28982 /* B WALLET.app */,
+				760E5FF2298E028500E28982 /* B WALLETTests.xctest */,
+				760E5FFC298E028500E28982 /* B WALLETUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,8 +111,12 @@
 		760E5FE3298E028400E28982 /* E WALLET */ = {
 			isa = PBXGroup;
 			children = (
+				768C4BC22990EED700AF6C47 /* Model */,
+				768C4BBE2990EE7000AF6C47 /* Controller */,
+				768C4BBD2990ED6700AF6C47 /* ViewModel */,
+				76FE1088298FBE3E00EAAB96 /* GoogleService-Info.plist */,
 				760E5FE4298E028400E28982 /* E_WALLETApp.swift */,
-				760E5FE6298E028400E28982 /* ContentView.swift */,
+				768C4BBB2990ED3900AF6C47 /* View */,
 				760E5FE8298E028500E28982 /* Assets.xcassets */,
 				760E5FEA298E028500E28982 /* E_WALLET.entitlements */,
 				760E5FEB298E028500E28982 /* Preview Content */,
@@ -129,12 +149,48 @@
 			path = "E WALLETUITests";
 			sourceTree = "<group>";
 		};
+		768C4BBB2990ED3900AF6C47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				760E6013298E325500E28982 /* UIStart.swift */,
+				760E6015298E327000E28982 /* UIWallet.swift */,
+				760E6011298E2AA300E28982 /* UISetting.swift */,
+				760E600F298E1AA000E28982 /* Home.swift */,
+				760E5FE6298E028400E28982 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		768C4BBD2990ED6700AF6C47 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				768C4BB92990DCA400AF6C47 /* Datamanager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		768C4BBE2990EE7000AF6C47 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				768C4BBF2990EE9600AF6C47 /* ApiManager.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		768C4BC22990EED700AF6C47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				768C4BC72990EF2500AF6C47 /* DataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		760E5FE0298E028300E28982 /* E WALLET */ = {
+		760E5FE0298E028300E28982 /* B WALLET */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 760E6006298E028500E28982 /* Build configuration list for PBXNativeTarget "E WALLET" */;
+			buildConfigurationList = 760E6006298E028500E28982 /* Build configuration list for PBXNativeTarget "B WALLET" */;
 			buildPhases = (
 				760E5FDD298E028300E28982 /* Sources */,
 				760E5FDE298E028300E28982 /* Frameworks */,
@@ -144,14 +200,14 @@
 			);
 			dependencies = (
 			);
-			name = "E WALLET";
+			name = "B WALLET";
 			productName = "E WALLET";
-			productReference = 760E5FE1298E028400E28982 /* E WALLET.app */;
+			productReference = 760E5FE1298E028400E28982 /* B WALLET.app */;
 			productType = "com.apple.product-type.application";
 		};
-		760E5FF1298E028500E28982 /* E WALLETTests */ = {
+		760E5FF1298E028500E28982 /* B WALLETTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 760E6009298E028500E28982 /* Build configuration list for PBXNativeTarget "E WALLETTests" */;
+			buildConfigurationList = 760E6009298E028500E28982 /* Build configuration list for PBXNativeTarget "B WALLETTests" */;
 			buildPhases = (
 				760E5FEE298E028500E28982 /* Sources */,
 				760E5FEF298E028500E28982 /* Frameworks */,
@@ -162,14 +218,14 @@
 			dependencies = (
 				760E5FF4298E028500E28982 /* PBXTargetDependency */,
 			);
-			name = "E WALLETTests";
+			name = "B WALLETTests";
 			productName = "E WALLETTests";
-			productReference = 760E5FF2298E028500E28982 /* E WALLETTests.xctest */;
+			productReference = 760E5FF2298E028500E28982 /* B WALLETTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		760E5FFB298E028500E28982 /* E WALLETUITests */ = {
+		760E5FFB298E028500E28982 /* B WALLETUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 760E600C298E028500E28982 /* Build configuration list for PBXNativeTarget "E WALLETUITests" */;
+			buildConfigurationList = 760E600C298E028500E28982 /* Build configuration list for PBXNativeTarget "B WALLETUITests" */;
 			buildPhases = (
 				760E5FF8298E028500E28982 /* Sources */,
 				760E5FF9298E028500E28982 /* Frameworks */,
@@ -180,9 +236,9 @@
 			dependencies = (
 				760E5FFE298E028500E28982 /* PBXTargetDependency */,
 			);
-			name = "E WALLETUITests";
+			name = "B WALLETUITests";
 			productName = "E WALLETUITests";
-			productReference = 760E5FFC298E028500E28982 /* E WALLETUITests.xctest */;
+			productReference = 760E5FFC298E028500E28982 /* B WALLETUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -217,13 +273,15 @@
 				Base,
 			);
 			mainGroup = 760E5FD8298E028300E28982;
+			packageReferences = (
+			);
 			productRefGroup = 760E5FE2298E028400E28982 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				760E5FE0298E028300E28982 /* E WALLET */,
-				760E5FF1298E028500E28982 /* E WALLETTests */,
-				760E5FFB298E028500E28982 /* E WALLETUITests */,
+				760E5FE0298E028300E28982 /* B WALLET */,
+				760E5FF1298E028500E28982 /* B WALLETTests */,
+				760E5FFB298E028500E28982 /* B WALLETUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +293,7 @@
 			files = (
 				760E5FED298E028500E28982 /* Preview Assets.xcassets in Resources */,
 				760E5FE9298E028500E28982 /* Assets.xcassets in Resources */,
+				76FE1089298FBE3E00EAAB96 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +318,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768C4BC02990EE9600AF6C47 /* ApiManager.swift in Sources */,
+				768C4BBA2990DCA400AF6C47 /* Datamanager.swift in Sources */,
 				760E5FE7298E028400E28982 /* ContentView.swift in Sources */,
+				760E6014298E325500E28982 /* UIStart.swift in Sources */,
+				760E6010298E1AA000E28982 /* Home.swift in Sources */,
+				760E6012298E2AA300E28982 /* UISetting.swift in Sources */,
+				760E6016298E327000E28982 /* UIWallet.swift in Sources */,
 				760E5FE5298E028400E28982 /* E_WALLETApp.swift in Sources */,
+				768C4BC82990EF2500AF6C47 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +352,12 @@
 /* Begin PBXTargetDependency section */
 		760E5FF4298E028500E28982 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 760E5FE0298E028300E28982 /* E WALLET */;
+			target = 760E5FE0298E028300E28982 /* B WALLET */;
 			targetProxy = 760E5FF3298E028500E28982 /* PBXContainerItemProxy */;
 		};
 		760E5FFE298E028500E28982 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 760E5FE0298E028300E28982 /* E WALLET */;
+			target = 760E5FE0298E028300E28982 /* B WALLET */;
 			targetProxy = 760E5FFD298E028500E28982 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -437,10 +503,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "YUEMENG-TANG.E-WALLET";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -475,10 +543,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "YUEMENG-TANG.E-WALLET";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -584,7 +654,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		760E6006298E028500E28982 /* Build configuration list for PBXNativeTarget "E WALLET" */ = {
+		760E6006298E028500E28982 /* Build configuration list for PBXNativeTarget "B WALLET" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				760E6007298E028500E28982 /* Debug */,
@@ -593,7 +663,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		760E6009298E028500E28982 /* Build configuration list for PBXNativeTarget "E WALLETTests" */ = {
+		760E6009298E028500E28982 /* Build configuration list for PBXNativeTarget "B WALLETTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				760E600A298E028500E28982 /* Debug */,
@@ -602,7 +672,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		760E600C298E028500E28982 /* Build configuration list for PBXNativeTarget "E WALLETUITests" */ = {
+		760E600C298E028500E28982 /* Build configuration list for PBXNativeTarget "B WALLETUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				760E600D298E028500E28982 /* Debug */,
