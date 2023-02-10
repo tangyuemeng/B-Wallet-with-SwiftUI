@@ -81,6 +81,8 @@ struct UISetting: View {
                                         
             }
             .padding(.bottom)
+            .shadow(color: .gray, radius: 4, x: 0.0, y: 2)
+            
             NavigationLink(destination: ContentView(), tag: 1, selection: $tag) {
                 EmptyView()
             }

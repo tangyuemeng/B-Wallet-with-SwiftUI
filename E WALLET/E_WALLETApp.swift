@@ -21,10 +21,18 @@ import SwiftUI
 @main
 struct E_WALLETApp: App {
 //    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+    //MARK here to check if user first lauch 
+    let useronboarded = UserDefaults.standard.bool(forKey:UserDefaultsKeys.AccountInfo().UserOnBoarded)
     var body: some Scene {
         WindowGroup {
             NavigationView {
-              ContentView()
+                if useronboarded {
+                    Home()
+                }
+                else{
+                    ContentView()
+                }
             }
         }
     }

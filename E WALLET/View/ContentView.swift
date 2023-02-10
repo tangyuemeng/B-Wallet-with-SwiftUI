@@ -47,7 +47,8 @@ struct ContentView: View {
                 }
                 //SIGN UP BUTTON
                 Button(action:{
-
+                    let defaults = UserDefaults.standard
+                    defaults.set(true, forKey: UserDefaultsKeys.AccountInfo().UserOnBoarded)
                 })
                 {
                     RoundedRectangle(cornerRadius: 13)

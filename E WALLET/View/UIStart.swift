@@ -58,18 +58,10 @@ struct UIStart: View {
             }
             .background(Color.clear)
             .listStyle(.plain)
+            .cornerRadius(10)
             .shadow(color: .gray, radius: 4, x: 0.0, y: 2)
             .frame(width: UIScreen.main.bounds.width*0.94, height: UIScreen.main.bounds.height*0.6, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
     
-            
-//            RoundedRectangle(cornerRadius: 0)
-//                .fill(Color.clear)
-//                .background(LinearGradient(colors: [Color("Orange").opacity(0.9), Color("Darkblue").opacity(0.9)],startPoint: .topLeading, endPoint: .bottomTrailing))
-//                .shadow(color: .gray, radius: 4, x: 0.0, y: 2)
-//                .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.6, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-//                .overlay(
-//
-//                    )
             Spacer()
         }.padding(.top)
     }

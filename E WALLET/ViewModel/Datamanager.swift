@@ -1,7 +1,7 @@
 import SwiftUI
 import Foundation
 
-
+//MARK viewmodel for swiftui
 class ViewModel: ObservableObject {
     @Published var rates = [Rate]()
     @Published var iconurls = [IconUrl]()
@@ -14,11 +14,12 @@ class ViewModel: ObservableObject {
         print("datamanager:icon")
         self.fetchicon()
     }
-    
+    //MARK get filtered rate data
     var filterRates: [Rate] {
         return searchText == "" ? rates : rates.filter { $0.asset_id_quote.contains(searchText.uppercased()) }
     }
     
+    //MARK get filtered icon data
     func filterIcon(searchText : String) -> String{
         let iconurl = iconurls.filter { $0.asset_id == searchText.uppercased() }
         return iconurl.isEmpty ? "" : iconurl[0].url

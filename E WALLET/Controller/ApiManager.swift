@@ -10,6 +10,7 @@ import SwiftUI
 class CryptoAPI {
     let API_KEY = "A4C94304-578F-4545-972A-B4AE87DF45DA"
     
+    //MARK Digital currency rates data from coinAPI
     func getCryptoData(currency: String,previewMode: Bool, _ completion:@escaping ([Rate]) -> ()) {
         if previewMode {
             completion(Rate.sampleRates)
@@ -50,6 +51,7 @@ class CryptoAPI {
         .resume()
     }
     
+    //MARK Digital currency icon data from coinAPI
     func getIconData(_ completion:@escaping ([IconUrl]) -> ()) {
 
         let urlString = "https://rest.coinapi.io/v1/assets/icons/32"

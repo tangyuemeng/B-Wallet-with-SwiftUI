@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//MARK data model of b wallet
+//MARK Digital currency data model with defalut data
 struct Crypto: Decodable {
     let asset_id_base: String
     let rates: [Rate]
@@ -31,7 +33,7 @@ struct Rate: Decodable,Identifiable{
     }
     
 }
-
+//MARK Digital currency icon model with defalut data
 struct IconUrl: Decodable{
     let asset_id: String
     let url:String
@@ -58,4 +60,19 @@ struct IconUrl: Decodable{
         }
         return sampleicon
     }
+}
+
+//MARK UserDefaults key data
+struct UserDefaultsKeys {
+
+    struct AccountInfo {
+        let Username = "Username"
+        let Password = "Password"
+        let UserOnBoarded = "UserOnBoarded"
+    }
+    
+    struct BalanceInfo {
+        let TotalBalance = "TotalBalance"
+    }
+
 }

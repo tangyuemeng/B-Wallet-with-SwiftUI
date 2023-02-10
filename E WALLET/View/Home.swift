@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//main menu
+//MARK main menu
 struct Home: View {
     @State var pageNumber = 1
     @State var offset: CGSize = CGSize(width: UIScreen.main.bounds.width, height: 0)
@@ -35,7 +35,7 @@ struct Home_Previews: PreviewProvider {
     }
 }
 
-
+//MARK view for top banner
 struct top_banner: View {
     @State var Userid = "tang"
     var body: some View {
@@ -61,7 +61,7 @@ struct top_banner: View {
         .frame(width: UIScreen.main.bounds.width-20)
     }
 }
-
+//MARK view for bottom_navi
 struct bottom_navi: View {
     @Binding var pageNumber : Int
     var body: some View {
