@@ -26,8 +26,8 @@ struct UIStart: View {
             HStack{
                 Text("$USD")
                     .font(.largeTitle)
-                .bold()
-                .padding(.leading)
+                    .bold()
+                    .padding(.leading)
                 Spacer()
             }
             .padding(.bottom)

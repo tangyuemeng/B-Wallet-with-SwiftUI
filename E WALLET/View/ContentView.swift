@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 
 struct ContentView: View {
     @State private var emailaddress = ""
     @State private var password = ""
     @State private var tag : Int? = 0
+    @State private var showdialog = false
+    @State var errormessage = ""
     var body: some View {
+        ZStack{
             VStack(spacing:15) {
                 Spacer()
                 HStack{
@@ -32,7 +38,7 @@ struct ContentView: View {
                     .cornerRadius(10)
                 //LOGIN BUTTON
                 Button(action:{
-                    Firebase().Signup(email:emailaddress,password: password)
+                    self.login(email: emailaddress, password: password)
                 })
                 {
                     RoundedRectangle(cornerRadius: 13)
@@ -48,10 +54,7 @@ struct ContentView: View {
                 }
                 //SIGN UP BUTTON
                 Button(action:{
-//                    Firebase().login(email:"test@email.com",password: "123456")
-//                    let defaults = UserDefaults.standard
-//                    defaults.set(true, forKey: UserDefaultsKeys.AccountInfo().UserOnBoarded)
-               
+                    self.Signup(email: emailaddress, password: password)
                 })
                 {
                     RoundedRectangle(cornerRadius: 13)
@@ -67,19 +70,94 @@ struct ContentView: View {
                 }
                 
                 Spacer()
-
+                
                 NavigationLink(destination: Home(), tag: 1, selection: $tag) {
                     EmptyView()
                 }
             }.padding(.bottom)
-            .navigationBarHidden(true)
-     
-
+              
             //end of vstask
+            
+            if showdialog {
+                Dialog(errormessage: $errormessage)
+            }
+        }
+        .navigationBarHidden(true)
+            
         
     }
+    
+    func login(email : String, password : String) -> Void {
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                showdialog.toggle()
+                errormessage = error?.localizedDescription ?? "Unknow Error"
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                    showdialog.toggle()
+                })
+                print(error?.localizedDescription ?? "")
+            } else {
+                showdialog.toggle()
+                errormessage = "Loading..."
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                    self.tag = 1
+                    showdialog.toggle()
+                })
+            }
+        }
+    }
+    
+    func Signup(email : String, password : String) -> Void {
+        Auth.auth().createUser(withEmail: email, password: password){ (result, error) in
+            if error != nil {
+                showdialog.toggle()
+                errormessage = error?.localizedDescription ?? "Unknow Error"
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                    showdialog.toggle()
+                })
+                print(error?.localizedDescription ?? "")
+            } else {
+                showdialog.toggle()
+                errormessage = "Loading..."
+                UserDefaultsKeys().resetUserDefault(username: "", password: "", useronboard: true, totalbalance: 0.0)
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                    self.tag = 1
+                    showdialog.toggle()
+                })
+            }
+        }
+    }
+    
        
     }
+
+
+struct Dialog : View {
+    @Binding var errormessage : String
+    var body: some View {
+        VStack{
+            RoundedRectangle(cornerRadius: 13)
+                .fill(Color.white)
+                .shadow(color: .gray, radius: 4, x: 0.0, y: 2)
+                .frame(width: UIScreen.main.bounds.width*0.7, height: UIScreen.main.bounds.width*0.5, alignment: .center)
+                .overlay(
+                    VStack(spacing:10){
+//                       Image(systemName:"person.crop.circle.badge.exclamationmark")
+//                            .resizable()
+                        ActivityIndicator()
+                            .frame(width: 40,height: 40)
+                            .frame(width: 50,height: 50)
+                            .padding(.top,30)
+                        Text(errormessage)
+                            .bold()
+                            .padding()
+                        Spacer()
+                    }
+                )
+            
+        }
+    }
+}
 
 
 struct ContentView_Previews: PreviewProvider {

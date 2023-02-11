@@ -26,6 +26,7 @@
 		76FF63B629962EAB00CCE55E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 76FF63B529962EAB00CCE55E /* FirebaseDatabase */; };
 		76FF63B829962ED500CCE55E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 76FF63B729962ED500CCE55E /* FirebaseFirestore */; };
 		76FF63BA299633F500CCE55E /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FF63B9299633F500CCE55E /* Firebase.swift */; };
+		76FF63BC299772E600CCE55E /* LoadingSF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FF63BB299772E600CCE55E /* LoadingSF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		768C4BC72990EF2500AF6C47 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		76FE1088298FBE3E00EAAB96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		76FF63B9299633F500CCE55E /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		76FF63BB299772E600CCE55E /* LoadingSF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSF.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				760E6011298E2AA300E28982 /* UISetting.swift */,
 				760E600F298E1AA000E28982 /* Home.swift */,
 				760E5FE6298E028400E28982 /* ContentView.swift */,
+				76FF63BB299772E600CCE55E /* LoadingSF.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			files = (
 				76FF63BA299633F500CCE55E /* Firebase.swift in Sources */,
 				768C4BC02990EE9600AF6C47 /* ApiManager.swift in Sources */,
+				76FF63BC299772E600CCE55E /* LoadingSF.swift in Sources */,
 				768C4BBA2990DCA400AF6C47 /* Datamanager.swift in Sources */,
 				760E5FE7298E028400E28982 /* ContentView.swift in Sources */,
 				760E6014298E325500E28982 /* UIStart.swift in Sources */,
