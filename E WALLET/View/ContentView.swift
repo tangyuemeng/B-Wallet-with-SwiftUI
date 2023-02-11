@@ -36,6 +36,18 @@ struct ContentView: View {
                     .frame(width: UIScreen.main.bounds.width*0.75,height:50)
                     .background(Color.black.opacity(0.05))
                     .cornerRadius(10)
+                
+                Button(action:{
+                    self.ResetPassword(email: emailaddress)
+                }){
+                    HStack{
+                        Text("Forget password? Click here!")
+                            .font(.caption)
+                            .foregroundColor(Color("Darkblue"))
+                        Spacer()
+                    }}
+                .frame(width: UIScreen.main.bounds.width*0.75)
+                
                 //LOGIN BUTTON
                 Button(action:{
                     self.login(email: emailaddress, password: password)
@@ -52,6 +64,7 @@ struct ContentView: View {
                         )
                     
                 }
+                
                 //SIGN UP BUTTON
                 Button(action:{
                     self.Signup(email: emailaddress, password: password)
@@ -100,8 +113,8 @@ struct ContentView: View {
                 showdialog.toggle()
                 errormessage = "Loading..."
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                    self.tag = 1
                     showdialog.toggle()
+                    self.tag = 1
                 })
             }
         }
@@ -121,9 +134,25 @@ struct ContentView: View {
                 errormessage = "Loading..."
                 UserDefaultsKeys().resetUserDefault(username: "", password: "", useronboard: true, totalbalance: 0.0)
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                    showdialog.toggle()
                     self.tag = 1
+                })
+            }
+        }
+    }
+    
+    func ResetPassword(email : String) -> Void {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if error != nil {
+                showdialog.toggle()
+                errormessage = error?.localizedDescription ?? "Unknow Error"
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                     showdialog.toggle()
                 })
+                print(error?.localizedDescription ?? "")
+            }
+            else {
+                
             }
         }
     }
@@ -145,8 +174,8 @@ struct Dialog : View {
 //                       Image(systemName:"person.crop.circle.badge.exclamationmark")
 //                            .resizable()
                         ActivityIndicator()
+                            .foregroundColor(Color("Darkblue"))
                             .frame(width: 40,height: 40)
-                            .frame(width: 50,height: 50)
                             .padding(.top,30)
                         Text(errormessage)
                             .bold()
