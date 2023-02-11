@@ -27,6 +27,12 @@
 		76FF63B829962ED500CCE55E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 76FF63B729962ED500CCE55E /* FirebaseFirestore */; };
 		76FF63BA299633F500CCE55E /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FF63B9299633F500CCE55E /* Firebase.swift */; };
 		76FF63BC299772E600CCE55E /* LoadingSF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FF63BB299772E600CCE55E /* LoadingSF.swift */; };
+		76FF63BE29980DB200CCE55E /* RxCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF63BD29980DB200CCE55E /* RxCocoa.xcframework */; };
+		76FF63BF29980DB200CCE55E /* RxCocoa.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF63BD29980DB200CCE55E /* RxCocoa.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76FF63C229980DC200CCE55E /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF63C129980DC200CCE55E /* RxRelay.xcframework */; };
+		76FF63C329980DC200CCE55E /* RxRelay.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF63C129980DC200CCE55E /* RxRelay.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76FF63C529980DCF00CCE55E /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF63C429980DCF00CCE55E /* RxSwift.xcframework */; };
+		76FF63C629980DCF00CCE55E /* RxSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF63C429980DCF00CCE55E /* RxSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,22 @@
 			remoteInfo = "E WALLET";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		76FF63C029980DB300CCE55E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				76FF63C629980DCF00CCE55E /* RxSwift.xcframework in Embed Frameworks */,
+				76FF63BF29980DB200CCE55E /* RxCocoa.xcframework in Embed Frameworks */,
+				76FF63C329980DC200CCE55E /* RxRelay.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		760E5FE1298E028400E28982 /* B WALLET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "B WALLET.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +90,9 @@
 		76FE1088298FBE3E00EAAB96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		76FF63B9299633F500CCE55E /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		76FF63BB299772E600CCE55E /* LoadingSF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSF.swift; sourceTree = "<group>"; };
+		76FF63BD29980DB200CCE55E /* RxCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxCocoa.xcframework; path = ../../../../Downloads/RxSwift.xcframework/RxCocoa.xcframework; sourceTree = "<group>"; };
+		76FF63C129980DC200CCE55E /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxRelay.xcframework; path = ../../../../Downloads/RxSwift.xcframework/RxRelay.xcframework; sourceTree = "<group>"; };
+		76FF63C429980DCF00CCE55E /* RxSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxSwift.xcframework; path = ../../../../Downloads/RxSwift.xcframework/RxSwift.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +101,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				76FF63B629962EAB00CCE55E /* FirebaseDatabase in Frameworks */,
+				76FF63BE29980DB200CCE55E /* RxCocoa.xcframework in Frameworks */,
 				76FF63B429962E8800CCE55E /* FirebaseAuth in Frameworks */,
+				76FF63C529980DCF00CCE55E /* RxSwift.xcframework in Frameworks */,
+				76FF63C229980DC200CCE55E /* RxRelay.xcframework in Frameworks */,
 				76FF63B829962ED500CCE55E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +229,9 @@
 		76FF63B229962E8800CCE55E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76FF63C429980DCF00CCE55E /* RxSwift.xcframework */,
+				76FF63C129980DC200CCE55E /* RxRelay.xcframework */,
+				76FF63BD29980DB200CCE55E /* RxCocoa.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -215,6 +246,7 @@
 				760E5FDD298E028300E28982 /* Sources */,
 				760E5FDE298E028300E28982 /* Frameworks */,
 				760E5FDF298E028300E28982 /* Resources */,
+				76FF63C029980DB300CCE55E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

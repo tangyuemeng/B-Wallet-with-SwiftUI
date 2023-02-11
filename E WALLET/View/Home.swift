@@ -37,7 +37,7 @@ struct Home_Previews: PreviewProvider {
 
 //MARK view for top banner
 struct top_banner: View {
-    @State var Userid = "tang"
+    @State var Userid = UserDefaults.standard.string(forKey: UserDefaultsKeys.AccountInfo().Username)
     var body: some View {
         VStack{
             HStack(spacing:10){
@@ -48,7 +48,7 @@ struct top_banner: View {
                     HStack{
                         Text("hello!")
                             .font(.subheadline)
-                        Text(Userid)
+                        Text(Userid!)
                             .font(.subheadline)
                     }
                     Text("Welcome back")

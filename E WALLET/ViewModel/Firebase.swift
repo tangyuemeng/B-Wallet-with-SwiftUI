@@ -12,6 +12,9 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class Firebase : ObservableObject {
+    
+    let db = Firestore.firestore()
+    
     func login(email : String, password : String) -> Void {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
@@ -28,6 +31,21 @@ class Firebase : ObservableObject {
                 print(error?.localizedDescription ?? "")
             } else {
                 print("success")
+            }
+        }
+    }
+    
+    func AddData() -> Void{
+        var ref: DocumentReference? = nil
+        ref = db.collection("Users").addDocument(data: [
+            "first": "Ada",
+            "last": "Lovelace",
+            "born": 1815
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
             }
         }
     }
