@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var emailaddress = ""
     @State private var password = ""
-    @State private var wrong_emailaddress = 0
-    @State private var wrong_password = 0
+    @State private var tag : Int? = 0
     var body: some View {
             VStack(spacing:15) {
                 Spacer()
@@ -32,7 +31,9 @@ struct ContentView: View {
                     .background(Color.black.opacity(0.05))
                     .cornerRadius(10)
                 //LOGIN BUTTON
-                NavigationLink(destination:Home())
+                Button(action:{
+                    Firebase().Signup(email:emailaddress,password: password)
+                })
                 {
                     RoundedRectangle(cornerRadius: 13)
                         .foregroundColor(Color("Darkblue"))
@@ -47,8 +48,10 @@ struct ContentView: View {
                 }
                 //SIGN UP BUTTON
                 Button(action:{
-                    let defaults = UserDefaults.standard
-                    defaults.set(true, forKey: UserDefaultsKeys.AccountInfo().UserOnBoarded)
+//                    Firebase().login(email:"test@email.com",password: "123456")
+//                    let defaults = UserDefaults.standard
+//                    defaults.set(true, forKey: UserDefaultsKeys.AccountInfo().UserOnBoarded)
+               
                 })
                 {
                     RoundedRectangle(cornerRadius: 13)
@@ -63,8 +66,11 @@ struct ContentView: View {
                     
                 }
                 
-            Spacer()
+                Spacer()
 
+                NavigationLink(destination: Home(), tag: 1, selection: $tag) {
+                    EmptyView()
+                }
             }.padding(.bottom)
             .navigationBarHidden(true)
      

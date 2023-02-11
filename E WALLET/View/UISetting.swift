@@ -67,6 +67,8 @@ struct UISetting: View {
             
             Spacer()
             Button(action:{
+                UserDefaultsKeys().resetUserDefault(username: "", password: "", useronboard: false, totalbalance: 0.0)
+         
                 self.tag = 1
             })
             {

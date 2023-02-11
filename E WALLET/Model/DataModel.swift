@@ -75,4 +75,12 @@ struct UserDefaultsKeys {
         let TotalBalance = "TotalBalance"
     }
 
+    func resetUserDefault (username:String,password:String,useronboard:Bool,totalbalance:Double){
+        let defaults = UserDefaults.standard
+        defaults.set(username, forKey: UserDefaultsKeys.AccountInfo().Username)
+        defaults.set(password, forKey: UserDefaultsKeys.AccountInfo().Password)
+        defaults.set(useronboard, forKey: UserDefaultsKeys.AccountInfo().UserOnBoarded)
+        defaults.set(totalbalance, forKey: UserDefaultsKeys.BalanceInfo().TotalBalance)
+        
+    }
 }
