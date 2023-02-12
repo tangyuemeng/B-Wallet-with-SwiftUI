@@ -1,5 +1,7 @@
 # デジタル通貨の価格、総額　管理アプリ「B Wallet」
 An APP that can check rates of digital currency and calculate possessions. 
+
+
 ![image](https://github.com/tangyuemeng/B-Wallet-with-SwiftUI/blob/develop/Screenshots/home.gif)
 
 <br><br>
