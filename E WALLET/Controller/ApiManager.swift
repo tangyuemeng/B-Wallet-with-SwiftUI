@@ -71,7 +71,7 @@ class CryptoAPI {
                 }
                 catch let error {
                     print("iconDataerror\(error)")
-                    observer.onError(error)
+                    observer.onNext(IconUrl.sampleIcon)
                 }
                 observer.onCompleted()
                 }

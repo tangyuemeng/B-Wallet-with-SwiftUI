@@ -70,6 +70,14 @@ class ViewModel: ObservableObject {
             }
         }).disposed(by: disposeBag)
         
+//        CryptoAPI().getIconData() {icondata in
+//            DispatchQueue.main.async {
+//                withAnimation {
+//                    self.iconurls = icondata
+//                }
+//            }
+//        }
+        
     }
     
 }
