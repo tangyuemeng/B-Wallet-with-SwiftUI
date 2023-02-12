@@ -35,18 +35,44 @@ class Firebase : ObservableObject {
         }
     }
     
-    func AddData() -> Void{
-        var ref: DocumentReference? = nil
-        ref = db.collection("Users").addDocument(data: [
-            "first": "Ada",
-            "last": "Lovelace",
-            "born": 1815
+    func AddData(id : String, password : String, totalbalance : Double) -> Void{
+        db.collection("Users").document(id).setData([
+            "email": id,
+            "password": password,
+            "totalbalance": totalbalance
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Document added with ID: \(ref!.documentID)")
+                print("Document added with ID: ")
             }
+        }
+    }
+    
+    func GetData(id : String) -> Void{
+        db.collection("Users").document(id).getDocument { (document, error) in
+            if let document = document, document.exists {
+                let email = document.data()!["email"]
+                let totalbalance = document.data()!["totalbalance"]
+                UserDefaults.standard.set(totalbalance, forKey: UserDefaultsKeys.BalanceInfo().TotalBalance)
+                UserDefaults.standard.set(email, forKey: UserDefaultsKeys.AccountInfo().Username)
+                
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
+    func Updatedata(id : String, totalbalance : Double) -> Void{
+        db.collection("Users").document(id).updateData([
+            "totalbalance": totalbalance
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+            
         }
     }
     

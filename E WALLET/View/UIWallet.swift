@@ -93,6 +93,7 @@ struct UIWallet: View {
 struct BottomSheetView : View {
     @ObservedObject var viewmodel = ViewModel()
     @State var offsetY : CGFloat = UIScreen.main.bounds.height
+    @State var email = UserDefaults.standard.string(forKey: UserDefaultsKeys.AccountInfo().Username)
     @State var title : String
     @State var searchId = ""
     @State var searchRate = 0.0
@@ -119,6 +120,7 @@ struct BottomSheetView : View {
                             if title == "Receive" {
                                 totalbalance += amount*searchRate
                             }
+                            Firebase().Updatedata(id: email!, totalbalance: totalbalance)
                             UserDefaults.standard.set(totalbalance,forKey: UserDefaultsKeys.BalanceInfo().TotalBalance)
                             self.showsheet.toggle()
                             

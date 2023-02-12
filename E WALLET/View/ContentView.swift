@@ -67,9 +67,7 @@ struct ContentView: View {
                 
                 //SIGN UP BUTTON
                 Button(action:{
-//                    self.Signup(email: emailaddress, password: password)
-                    
-                    
+                    self.Signup(email: emailaddress, password: password)
                 })
                 {
                     RoundedRectangle(cornerRadius: 13)
@@ -114,7 +112,7 @@ struct ContentView: View {
             } else {
                 showdialog.toggle()
                 errormessage = "Loading..."
-                UserDefaultsKeys().resetUserDefault(username: emailaddress, password: password, useronboard: true, totalbalance: 0.0)
+                Firebase().GetData(id: email)
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                     showdialog.toggle()
                     self.tag = 1
@@ -135,6 +133,7 @@ struct ContentView: View {
             } else {
                 showdialog.toggle()
                 errormessage = "Loading..."
+                Firebase().AddData(id: email, password: password, totalbalance: 0.0)
                 UserDefaultsKeys().resetUserDefault(username: emailaddress, password: password, useronboard: true, totalbalance: 0.0)
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                     showdialog.toggle()
