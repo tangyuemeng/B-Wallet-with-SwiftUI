@@ -1,5 +1,5 @@
-# デジタル通貨の価格、個人のお金、管理アプリ「B Wallet」
-An APP that can check rates of digital currency and calculate own account application. 
+# デジタル通貨の価格、総額　管理アプリ「B Wallet」
+An APP that can check rates of digital currency and calculate possessions application. 
 #SwiftUI#Swift#MVVM#RxSwift#Firebase
 ![image](https://github.com/tangyuemeng/B-Wallet-with-SwiftUI/blob/develop/Screenshots/home.gif)
 
@@ -13,7 +13,7 @@ An APP that can check rates of digital currency and calculate own account applic
 
 ## 1. アプリ概要
 
-**デジタル通貨の価格を確認し 個人の財布を管理できるアプリ**です。
+**デジタル通貨の価格を確認し デジタル通貨の総額を管理できるアプリ**です。
 <br>
 私はデジタル通貨に興味あり、自分もBitcoinを持っています。
 いつでも、どこでも、デジタル通貨の価格や自分の希望収入を確認したい、
