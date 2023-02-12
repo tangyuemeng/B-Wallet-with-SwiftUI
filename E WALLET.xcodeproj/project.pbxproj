@@ -34,6 +34,7 @@
 		76FF63C529980DCF00CCE55E /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF63C429980DCF00CCE55E /* RxSwift.xcframework */; };
 		76FF63C629980DCF00CCE55E /* RxSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF63C429980DCF00CCE55E /* RxSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76FF63C92999001500CCE55E /* home.gif in Resources */ = {isa = PBXBuildFile; fileRef = 76FF63C82999001500CCE55E /* home.gif */; };
+		76FF63CB29990E7600CCE55E /* B Wallet.png in Resources */ = {isa = PBXBuildFile; fileRef = 76FF63CA29990E7600CCE55E /* B Wallet.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		76FF63C129980DC200CCE55E /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxRelay.xcframework; path = ../../../../Downloads/RxSwift.xcframework/RxRelay.xcframework; sourceTree = "<group>"; };
 		76FF63C429980DCF00CCE55E /* RxSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxSwift.xcframework; path = ../../../../Downloads/RxSwift.xcframework/RxSwift.xcframework; sourceTree = "<group>"; };
 		76FF63C82999001500CCE55E /* home.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = home.gif; sourceTree = "<group>"; };
+		76FF63CA29990E7600CCE55E /* B Wallet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "B Wallet.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 		76FF63C72998FFF400CCE55E /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
+				76FF63CA29990E7600CCE55E /* B Wallet.png */,
 				76FF63C82999001500CCE55E /* home.gif */,
 			);
 			path = Screenshots;
@@ -360,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76FF63CB29990E7600CCE55E /* B Wallet.png in Resources */,
 				760E5FED298E028500E28982 /* Preview Assets.xcassets in Resources */,
 				76FF63C92999001500CCE55E /* home.gif in Resources */,
 				760E5FE9298E028500E28982 /* Assets.xcassets in Resources */,
