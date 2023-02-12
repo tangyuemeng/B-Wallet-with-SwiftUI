@@ -63,8 +63,8 @@ An APP that can check rates of digital currency and calculate own account applic
 ## 4. アプリの特徴
 
 ### 
-デジタル通貨のリアルタイム価格　確認
-![image](https://github.com/tangyuemeng/B-Wallet-with-SwiftUI/blob/develop/Screenshots/１.gif)
+デジタル通貨のリアルタイム価格確認
+![image](https://github.com/tangyuemeng/B-Wallet-with-SwiftUI/blob/develop/Screenshots/1.gif)
 
 <br>
 
