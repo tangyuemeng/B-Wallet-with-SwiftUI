@@ -33,6 +33,7 @@
 		76FF63C329980DC200CCE55E /* RxRelay.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF63C129980DC200CCE55E /* RxRelay.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76FF63C529980DCF00CCE55E /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF63C429980DCF00CCE55E /* RxSwift.xcframework */; };
 		76FF63C629980DCF00CCE55E /* RxSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76FF63C429980DCF00CCE55E /* RxSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76FF63C92999001500CCE55E /* home.gif in Resources */ = {isa = PBXBuildFile; fileRef = 76FF63C82999001500CCE55E /* home.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		76FF63BD29980DB200CCE55E /* RxCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxCocoa.xcframework; path = ../../../../Downloads/RxSwift.xcframework/RxCocoa.xcframework; sourceTree = "<group>"; };
 		76FF63C129980DC200CCE55E /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxRelay.xcframework; path = ../../../../Downloads/RxSwift.xcframework/RxRelay.xcframework; sourceTree = "<group>"; };
 		76FF63C429980DCF00CCE55E /* RxSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxSwift.xcframework; path = ../../../../Downloads/RxSwift.xcframework/RxSwift.xcframework; sourceTree = "<group>"; };
+		76FF63C82999001500CCE55E /* home.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = home.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		760E5FD8298E028300E28982 = {
 			isa = PBXGroup;
 			children = (
+				76FF63C72998FFF400CCE55E /* Screenshots */,
 				760E5FE3298E028400E28982 /* E WALLET */,
 				760E5FF5298E028500E28982 /* E WALLETTests */,
 				760E5FFF298E028500E28982 /* E WALLETUITests */,
@@ -234,6 +237,14 @@
 				76FF63BD29980DB200CCE55E /* RxCocoa.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76FF63C72998FFF400CCE55E /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				76FF63C82999001500CCE55E /* home.gif */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				760E5FED298E028500E28982 /* Preview Assets.xcassets in Resources */,
+				76FF63C92999001500CCE55E /* home.gif in Resources */,
 				760E5FE9298E028500E28982 /* Assets.xcassets in Resources */,
 				76FE1089298FBE3E00EAAB96 /* GoogleService-Info.plist in Resources */,
 			);
