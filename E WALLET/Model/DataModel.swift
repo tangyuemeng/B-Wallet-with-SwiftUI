@@ -42,7 +42,6 @@ struct IconUrl: Decodable{
         var sampleicon = [IconUrl]()
         
         for i in 0...9 {
-            let randomNumber = Double(Array(0...1000).randomElement()!)
             let Currency = ["BUSD","TRX","USDC","SOL","ADA","XRP","BNB","USDT","ETH","BTC"]
             let Url = [
                        "https://s2.coinmarketcap.com/static/img/coins/64x64/4687.png",

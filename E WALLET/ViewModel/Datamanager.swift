@@ -1,17 +1,16 @@
 import SwiftUI
 import Foundation
-
+import RxSwift
 //MARK viewmodel for swiftui
 class ViewModel: ObservableObject {
     @Published var rates = [Rate]()
     @Published var iconurls = [IconUrl]()
     @Published var searchText = ""
     @Published var iconid = ""
+    private let disposeBag = DisposeBag()
     
     init(rates: [Rate] = [Rate](), iconurls: [IconUrl] = [IconUrl](), searchText: String = "", iconid : String = "") {
-        print("datamanager:data")
         self.fetchData()
-        print("datamanager:icon")
         self.fetchicon()
     }
     //MARK get filtered rate data
@@ -30,23 +29,47 @@ class ViewModel: ObservableObject {
     }
     
     func fetchData() {
-        CryptoAPI().getCryptoData(currency: "USD", previewMode: false) {newRates in
-            DispatchQueue.main.async {
-                withAnimation {
-                    self.rates = newRates
+        CryptoAPI().getCryptoDataRx(currency: "USD").subscribe({response in
+            switch response {
+                case let .next(data):
+                DispatchQueue.main.async{
+                    withAnimation {
+                        self.rates = data as! [Rate]
+                    }
                 }
+                case let .error(error):
+                    print(error)
+                case .completed:
+                    break
             }
-        }
+        }).disposed(by: disposeBag)
+//        CryptoAPI().getCryptoData(currency: "USD", previewMode: false) {newRates in
+//            DispatchQueue.main.async {
+//                withAnimation {
+//                    self.rates = newRates
+//                }
+//            }
+//        }
+
     }
     
+    
     func fetchicon(){
-        CryptoAPI().getIconData() {icondata in
-            DispatchQueue.main.async {
-                withAnimation {
-                    self.iconurls = icondata
+        CryptoAPI().getIconDataRx().subscribe({response in
+            switch response {
+                case let .next(data):
+                DispatchQueue.main.async{
+                    withAnimation {
+                        self.iconurls = data as! [IconUrl]
+                    }
                 }
+                case let .error(error):
+                    print(error)
+                case .completed:
+                    break
             }
-        }
+        }).disposed(by: disposeBag)
+        
     }
     
 }
