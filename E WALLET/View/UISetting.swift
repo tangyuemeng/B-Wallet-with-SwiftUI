@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//MARK view for setting
 struct UISetting: View {
     let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
     let buildversion = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
@@ -47,28 +48,9 @@ struct UISetting: View {
                     }
             .padding(.bottom)
             
-      
-            
-//            HStack{
-//                VStack(alignment:.leading,spacing: 5){
-//                    Text("通知設定")
-//                        .font(Font.system(size: 17))
-//                        .foregroundColor(Color.black)
-//                        .bold()
-//                }
-//                Spacer()
-//                Image(systemName: "chevron.right")
-//                    .foregroundColor(Color.black)
-//
-//            }
-//            .frame(width: UIScreen.main.bounds.width-20)
-//
-//            Divider()
-            
             Spacer()
             Button(action:{
                 UserDefaultsKeys().resetUserDefault(username: "", password: "", useronboard: false, totalbalance: 0.0)
-         
                 self.tag = 1
             })
             {
@@ -89,10 +71,6 @@ struct UISetting: View {
                 EmptyView()
             }
         }.frame(width: UIScreen.main.bounds.width)
-        
-  
-        
-        
     }
     
 }

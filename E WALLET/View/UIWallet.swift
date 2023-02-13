@@ -13,6 +13,8 @@ struct UIWallet: View {
     @State var shoesheet = false
     @State var sheettitle = ""
     var body: some View {
+        
+        //ZStack to show the bottom sheet
         ZStack{
             VStack{
                 HStack{
@@ -139,6 +141,7 @@ struct BottomSheetView : View {
                 }
                 .padding(24)
                 
+                // search bar
                 TextField("Search as BTC ",text:$viewmodel.searchText)
                     .padding()
                     .frame(width: UIScreen.main.bounds.width*0.9,height:50)

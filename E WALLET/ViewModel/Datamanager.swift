@@ -6,10 +6,10 @@ class ViewModel: ObservableObject {
     @Published var rates = [Rate]()
     @Published var iconurls = [IconUrl]()
     @Published var searchText = ""
-    @Published var iconid = ""
     private let disposeBag = DisposeBag()
     
-    init(rates: [Rate] = [Rate](), iconurls: [IconUrl] = [IconUrl](), searchText: String = "", iconid : String = "") {
+    // MARK init the viewmodel
+    init(rates: [Rate] = [Rate](), iconurls: [IconUrl] = [IconUrl](), searchText: String = "") {
         self.fetchData()
         self.fetchicon()
     }

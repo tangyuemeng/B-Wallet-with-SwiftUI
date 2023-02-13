@@ -33,6 +33,7 @@ struct UIStart: View {
             .padding(.bottom)
             .frame(width: UIScreen.main.bounds.width)
             
+            // (start)main digital currency list
             List(viewmodel.filterRates) {item in
                 HStack {
                     AsyncImage(
@@ -46,8 +47,6 @@ struct UIStart: View {
                             //
                         }
                     )
-//                    AsyncImage(url: URL(string: viewmodel.filterIcon(searchText: item.asset_id_quote)))
-//                        .frame(width: 28,height: 28)
                     Text(item.asset_id_quote)
                         .fontWeight(.bold)
                     Spacer()
@@ -61,7 +60,8 @@ struct UIStart: View {
             .cornerRadius(10)
             .shadow(color: .gray, radius: 4, x: 0.0, y: 2)
             .frame(width: UIScreen.main.bounds.width*0.94, height: UIScreen.main.bounds.height*0.6, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-    
+            //(end)main digital currency list
+            
             Spacer()
         }.padding(.top)
     }

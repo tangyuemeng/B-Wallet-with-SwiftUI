@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+//MARK view for loading animation
 struct ActivityIndicator: View {
     
     @State private var isAnimating: Bool = false

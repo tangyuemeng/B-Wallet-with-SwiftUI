@@ -10,6 +10,7 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 
+//MARK view for login and signup page
 struct ContentView: View {
     @State private var emailaddress = ""
     @State private var password = ""
@@ -163,7 +164,7 @@ struct ContentView: View {
        
     }
 
-
+//MARK view for showing alarmong dialog
 struct Dialog : View {
     @Binding var errormessage : String
     var body: some View {

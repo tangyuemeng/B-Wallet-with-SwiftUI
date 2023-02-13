@@ -11,10 +11,12 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 
+//MARK Firebase data manager
 class Firebase : ObservableObject {
     
     let db = Firestore.firestore()
     
+    //MARK function of login
     func login(email : String, password : String) -> Void {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
@@ -25,6 +27,7 @@ class Firebase : ObservableObject {
         }
     }
     
+    //MARK function of signup
     func Signup(email : String, password : String) -> Void {
         Auth.auth().createUser(withEmail: email, password: password){ (result, error) in
             if error != nil {
@@ -35,6 +38,7 @@ class Firebase : ObservableObject {
         }
     }
     
+    //MARK function of saving new balance data to firestore
     func AddData(id : String, password : String, totalbalance : Double) -> Void{
         db.collection("Users").document(id).setData([
             "email": id,
@@ -49,6 +53,7 @@ class Firebase : ObservableObject {
         }
     }
     
+    //MARK function of getting balance data from firestore
     func GetData(id : String) -> Void{
         db.collection("Users").document(id).getDocument { (document, error) in
             if let document = document, document.exists {
@@ -63,6 +68,7 @@ class Firebase : ObservableObject {
         }
     }
     
+    //MARK function of updating balance data to firestore
     func Updatedata(id : String, totalbalance : Double) -> Void{
         db.collection("Users").document(id).updateData([
             "totalbalance": totalbalance

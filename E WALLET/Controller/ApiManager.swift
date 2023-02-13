@@ -9,9 +9,18 @@ import Foundation
 import SwiftUI
 import RxSwift
 
+//Fetch data from COINAPI
+//Use two way to fetch data
+// 1. Rxswift
+// 2. Basic asynchronous call
+// Compared to Basic asynchronous call,Rxswift makes it easier to detect the data change with beautiful code.
+
+
 class CryptoAPI {
+    // API_KEY : Registerd api key
     let API_KEY = "A4C94304-578F-4545-972A-B4AE87DF45DA"
-    
+    //  Rxswift
+    //MARK (Rxswift)Digital currency rate data from coinAPI
     func getCryptoDataRx(currency: String) -> Observable<Any> {
         
         return Observable.create { observer in
@@ -48,6 +57,7 @@ class CryptoAPI {
         }
     }
     
+    //MARK (Rxswift)Digital currency icon data from coinAPI
     func getIconDataRx() -> Observable<Any> {
         
         return Observable.create { observer in

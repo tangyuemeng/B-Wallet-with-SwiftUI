@@ -8,6 +8,8 @@
 import SwiftUI
 
 //MARK main menu
+// Three screens(UIStart,UIWallet,UISetting)selected by pageNumber
+// top and bottom navi are fixed
 struct Home: View {
     @State var pageNumber = 1
     @State var offset: CGSize = CGSize(width: UIScreen.main.bounds.width, height: 0)
@@ -61,6 +63,7 @@ struct top_banner: View {
         .frame(width: UIScreen.main.bounds.width-20)
     }
 }
+
 //MARK view for bottom_navi
 struct bottom_navi: View {
     @Binding var pageNumber : Int
