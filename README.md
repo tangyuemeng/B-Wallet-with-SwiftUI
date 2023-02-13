@@ -66,7 +66,7 @@ An APP that can check rates of digital currency and calculate possessions.
 ### 
 デジタル通貨のリアルタイム価格確認
 
-![image](https://github.com/tangyuemeng/B-Wallet-with-SwiftUI/blob/develop/Screenshots/1.gif)
+![image](https://github.com/tangyuemeng/B-Wallet-with-SwiftUI/blob/develop/Screenshots/4.gif)
 
 <br>
 
