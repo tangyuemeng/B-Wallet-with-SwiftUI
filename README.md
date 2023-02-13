@@ -63,16 +63,20 @@ An APP that can check rates of digital currency and calculate possessions.
 
 ## 4. アプリの特徴
 
-### 
-デジタル通貨のリアルタイム価格確認
+### デジタル通貨のリアルタイム価格確認
+検索バーでデジタル通貨の名前を入力、すぐに結果が出るのは便利
 
 ![image](https://github.com/tangyuemeng/B-Wallet-with-SwiftUI/blob/develop/Screenshots/4.gif)
 
 <br>
 
-### お金管理
-
+### 希望収益確認
 持っているデジタル通貨総額を記録する機能を実装しています。
+ - Send　デジタル通貨を送る
+デジタル通貨を選択、１０単位から送ることが可能
+
+ - Receive　デジタル通貨を受け取る
+デジタル通貨を選択、１０単位から受け取ることが可能
 
 ![image](https://github.com/tangyuemeng/B-Wallet-with-SwiftUI/blob/develop/Screenshots/wallet.gif)
 
