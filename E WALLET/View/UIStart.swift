@@ -10,9 +10,6 @@ import SwiftUI
 struct UIStart: View {
     @ObservedObject var viewmodel = ViewModel()
     @State var iconurls = [IconUrl]()
-//    init(){
-//        viewmodel.fetchicon()
-//    }
     var body: some View {
         VStack{
             HStack{
@@ -29,11 +26,18 @@ struct UIStart: View {
                     .bold()
                     .padding(.leading)
                 Spacer()
-            }
-            .padding(.bottom)
+            }.padding(.bottom,-0.5)
+
             .frame(width: UIScreen.main.bounds.width)
             
             // (start)main digital currency list
+            // search bar
+            TextField("Search like BTC ",text:$viewmodel.searchText)
+                .padding()
+                .frame(width: UIScreen.main.bounds.width*0.94,height:50)
+                .background(Color.black.opacity(0.05))
+                .cornerRadius(10)
+            
             List(viewmodel.filterRates) {item in
                 HStack {
                     AsyncImage(

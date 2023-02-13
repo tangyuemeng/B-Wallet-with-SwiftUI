@@ -115,6 +115,7 @@ struct ContentView: View {
                 errormessage = "Loading..."
                 Firebase().GetData(id: email)
                 UserDefaults.standard.set(true, forKey: UserDefaultsKeys.AccountInfo().UserOnBoarded)
+                UserDefaults.standard.set(emailaddress, forKey: UserDefaultsKeys.AccountInfo().Username)
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                     showdialog.toggle()
                     self.tag = 1

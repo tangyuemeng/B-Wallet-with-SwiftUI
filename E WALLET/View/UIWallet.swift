@@ -142,7 +142,7 @@ struct BottomSheetView : View {
                 .padding(24)
                 
                 // search bar
-                TextField("Search as BTC ",text:$viewmodel.searchText)
+                TextField("Search like BTC ",text:$viewmodel.searchText)
                     .padding()
                     .frame(width: UIScreen.main.bounds.width*0.9,height:50)
                     .background(Color.black.opacity(0.05))
